@@ -1,21 +1,16 @@
 {% extends 'layout.html' %}
 {% block body %}
 <div class='row'>
-    <div class='col-5 mx-auto'>
-        <h3>Edit Bulb</h3>
-        <hr>
+    <div class='mx-auto'>
+        <h3>Edit Bulb {{bulb.IP}}</h3>
         <form method='post' action='{{url_for("edit_bulb",ip=bulb.IP)}}'>
-            <div class='form-group'>
-                <label>IP</label>
-                <input type='text' name='ip' required class='form-control' value='{{bulb.IP}}' readonly>
-            </div>
             <div class='form-group'>
                 <label>Name</label>
                 <input type='text' name='name' required class='form-control' value='{{bulb.NAME}}'>
             </div>
             <div>
-                <input type='submit' value='Save' class='btn btn-success'>
-                <a href='{{url_for("index")}}' class='btn btn-primary'>Cancel</a>
+                <input type='submit' value='Save' class='btn btn-primary'>
+                <a href='{{url_for("index")}}' class='btn btn-secondary'>Cancel</a>
                 <a href='{{url_for("delete_bulb",ip=bulb.IP)}}' class='btn btn-danger loat-right'
                    onclick='return confirm("Are you sure to delete?")'>Delete</a>
             </div>

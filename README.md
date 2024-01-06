@@ -1,12 +1,12 @@
 # WiZ Flask
 
-A simple Flask application to manage WiZ Lights
+A simple Flask application to manage WiZ Lights using pywizlight library.
 
 ## Usage:
 
-setup.sh: create venv and install required packages.
+setup.bat/setup.sh: create venv and install required packages.
 
-main.sh: run the application.
+main.bat/main.sh: run the application.
 
 ## Screenshot:
 
